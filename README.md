@@ -1,6 +1,7 @@
 # damishop
 
-A flutter ecommerce mobile app using DRF for it backend
+An e-shop for selling Nigeria attires and clothing, ranging from men wares to women wrapper
+
 
 ## Getting Started
 
