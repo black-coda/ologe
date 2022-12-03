@@ -240,16 +240,18 @@ class _CardGridsState extends State<CardGrids> {
     return SliverGrid(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 1,
-        mainAxisSpacing: 5.0,
-        crossAxisSpacing: 5.0,
+        childAspectRatio: 0.2,
+        // This is the unnecessary change u did
+        mainAxisSpacing: 10.0,
+        crossAxisSpacing: 3.0,
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
           return Container(
-              color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                  .withOpacity(1.0),
-              height: 150.0);
+            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                .withOpacity(1.0),
+            height: 150.0,
+          );
         },
         childCount: 10,
       ),

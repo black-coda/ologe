@@ -32,6 +32,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   }
 
   void getData() async {
+    // await response from the server
     http.Response response = await http
         .get(Uri.parse("http://192.168.0.106:8000/api/v1/product-list-fbv/"));
     print(response.statusCode);
