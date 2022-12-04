@@ -15,9 +15,7 @@ class _MenuBarState extends State<MenuBar> {
 
   final List<Widget> pages = const [
     HomeScreen(),
-    Center(
-      child: Text("Yap"),
-    ),
+    HomeWidget(),
     Center(
       child: Text("Yap"),
     ),

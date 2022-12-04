@@ -1,5 +1,6 @@
 // import 'package:damishop/UI/logn_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math' as math;
 
@@ -240,17 +241,28 @@ class _CardGridsState extends State<CardGrids> {
     return SliverGrid(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.2,
+        childAspectRatio: 1.0,
         // This is the unnecessary change u did
-        mainAxisSpacing: 10.0,
+        mainAxisSpacing: 5.0,
         crossAxisSpacing: 3.0,
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
           return Container(
-            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                .withOpacity(1.0),
-            height: 150.0,
+            child: Column(
+             children: [
+               Container(
+                 decoration: const BoxDecoration(
+                   color: Colors.white,
+                   
+                 ),
+                 child: const Icon(FontAwesomeIcons.heart, size: 24,),
+               ),
+          
+               // Image goes here
+          
+             ],
+            ),
           );
         },
         childCount: 10,

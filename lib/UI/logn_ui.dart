@@ -33,12 +33,16 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   void getData() async {
     // await response from the server
-    http.Response response = await http
-        .get(Uri.parse("http://192.168.0.106:8000/api/v1/product-list-fbv/"));
-    print(response.statusCode);
+    // http.Response response = await http
+    //     .get(Uri.parse("http://192.168.0.106:8000/api/v1/product-list-fbv/"));
+    // print(response.statusCode);
 
-    print(response.body);
-    Map data = jsonDecode(response.body);
+    // print(response.body);
+    // Map data = jsonDecode(response.body);
+
+    var responses =
+        await http.get(Uri.parse("http://127.0.0.1:8000/categories/"));
+    print(responses.body);
   }
 
   @override
@@ -55,9 +59,7 @@ class _HomeWidgetState extends State<HomeWidget> {
               color: Theme.of(context).colorScheme.primary,
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
           Expanded(
             flex: 3,
             child: Form(
@@ -73,21 +75,15 @@ class _HomeWidgetState extends State<HomeWidget> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(
-                      height: 25,
-                    ),
+                    const SizedBox(height: 25),
                     const CustomTextField(
                         prefixIcon: Icons.email_outlined,
                         label: "Enter your email"),
-                    const SizedBox(
-                      height: 20,
-                    ),
+                    const SizedBox(height: 20),
                     const CustomTextField(
                         prefixIcon: Icons.lock_outline,
                         label: "Enter your password"),
-                    const SizedBox(
-                      height: 15,
-                    ),
+                    const SizedBox(height: 15),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -122,9 +118,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 50,
-                    ),
+                    const SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -137,9 +131,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 80,
-                    ),
+                    const SizedBox(height: 80),
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,9 +142,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             color: Colors.black,
                           ),
                         ),
-                        const SizedBox(
-                          width: 8,
-                        ),
+                        const SizedBox(width: 8),
                         GestureDetector(
                           onTap: () {
                             //TODO: To implement Navigate to login
@@ -165,9 +155,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 50,
-                        ),
+                        const SizedBox(height: 50),
                       ],
                     ),
                   ],
