@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math' as math;
 
+import 'cardGrid.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: const Color(0xffF6F6F6),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
           child: CustomScrollView(
             slivers: <Widget>[
               SliverToBoxAdapter(
@@ -228,45 +230,3 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class CardGrids extends StatefulWidget {
-  const CardGrids({super.key});
-
-  @override
-  State<CardGrids> createState() => _CardGridsState();
-}
-
-class _CardGridsState extends State<CardGrids> {
-  @override
-  Widget build(BuildContext context) {
-    return SliverGrid(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: 1.0,
-        // This is the unnecessary change u did
-        mainAxisSpacing: 5.0,
-        crossAxisSpacing: 3.0,
-      ),
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return Container(
-            child: Column(
-             children: [
-               Container(
-                 decoration: const BoxDecoration(
-                   color: Colors.white,
-                   
-                 ),
-                 child: const Icon(FontAwesomeIcons.heart, size: 24,),
-               ),
-          
-               // Image goes here
-          
-             ],
-            ),
-          );
-        },
-        childCount: 10,
-      ),
-    );
-  }
-}

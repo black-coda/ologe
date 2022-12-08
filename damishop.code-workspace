@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../django_workspace/ologe_backend/.vscode"
 		}
 	],
 	"settings": {
