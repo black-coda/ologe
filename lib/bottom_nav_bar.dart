@@ -1,6 +1,6 @@
 import 'package:damishop/UI/home.dart';
 import 'package:damishop/defaults.dart';
-import 'package:damishop/UI/logn_ui.dart';
+import 'package:damishop/UI/login_ui.dart';
 import 'package:flutter/material.dart';
 
 class MenuBar extends StatefulWidget {
@@ -18,9 +18,6 @@ class _MenuBarState extends State<MenuBar> {
     HomeWidget(),
     Center(
       child: Text("Yap"),
-    ),
-    Center(
-      child: Text("Its me"),
     ),
   ];
 

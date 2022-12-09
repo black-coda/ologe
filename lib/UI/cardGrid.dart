@@ -9,6 +9,7 @@ class CardGrids extends StatefulWidget {
 }
 
 class _CardGridsState extends State<CardGrids> {
+  // Color currentColor = Theme.of(context).colorScheme.primary;
   @override
   Widget build(BuildContext context) {
     return SliverGrid(
@@ -20,58 +21,57 @@ class _CardGridsState extends State<CardGrids> {
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return Stack(children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                      .withOpacity(1.0),
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0))),
-              padding: const EdgeInsets.only(bottom: 8.0, right: 0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        // height: 29,
+          return Container(
+            decoration: BoxDecoration(
+                color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                    .withOpacity(1.0),
+                borderRadius: const BorderRadius.all(Radius.circular(10.0))),
+            padding: const EdgeInsets.only(bottom: 2.0, right: 0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      // height: 29,
 
-                        decoration: BoxDecoration(
-                          color: Color((math.Random().nextDouble() * 0xFFFFFF)
-                                  .toInt())
-                              .withOpacity(1.0),
-                          borderRadius: const BorderRadius.only(
-                            topRight: Radius.circular(10.0),
-                            bottomLeft: Radius.circular(10),
-                          ),
-                        ),
-
-                        //Padding for favorite button
-                        padding: const EdgeInsets.all(10.0),
-
-                        // Favorite Icon
-                        child: Icon(
-                          Icons.favorite_border_sharp,
-                          size: 20,
-                          color: Theme.of(context).colorScheme.primary,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context)
+                            .colorScheme
+                            .secondary
+                            .withOpacity(0.8),
+                        borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10),
                         ),
                       ),
-                    ],
-                  ),
 
-                  // Image goes here
+                      //Padding for favorite button
+                      padding: const EdgeInsets.all(10.0),
 
-                  Positioned(
-                    bottom: 20,
-                    child: Image.asset(
-                      "assets/banner_1.png",
-                      // alignment: Alignment.topRight,
-                      // fit: BoxFit.fitHeight,
+                      // Favorite Icon
+                      child: Icon(
+                        Icons.favorite_border_sharp,
+                        size: 20,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
                     ),
+                  ],
+                ),
+
+                // Image goes here
+
+                SizedBox(
+                  height: 175,
+                  child: Image.asset(
+                    "assets/clothe_1.png",
+                    // alignment: Alignment.topRight,
+                    fit: BoxFit.contain,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ]);
+          );
         },
         childCount: 10,
       ),
