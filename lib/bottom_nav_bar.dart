@@ -3,6 +3,8 @@ import 'package:damishop/defaults.dart';
 import 'package:damishop/UI/login_ui.dart';
 import 'package:flutter/material.dart';
 
+import 'UI/profile/profile.dart';
+
 class MenuBar extends StatefulWidget {
   const MenuBar({super.key});
 
@@ -16,9 +18,7 @@ class _MenuBarState extends State<MenuBar> {
   final List<Widget> pages = const [
     HomeScreen(),
     HomeWidget(),
-    Center(
-      child: Text("Yap"),
-    ),
+    ProfileView(),
   ];
 
   @override

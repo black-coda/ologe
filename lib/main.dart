@@ -17,12 +17,14 @@ class AppWidget extends StatelessWidget {
         primaryColor: const Color(0xffE9963A),
         colorScheme: const ColorScheme.light(
           primary: Color(0xffE9963A),
-          secondary: Colors.white
+          secondary: Colors.white,
         ),
       ),
       debugShowCheckedModeBanner: false,
       // routes: ,
-      home: const SafeArea(child: MenuBar()),
+      home: const SafeArea(
+        child: MenuBar(),
+      ),
     );
   }
 }

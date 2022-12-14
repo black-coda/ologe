@@ -208,6 +208,9 @@ class DashFeed extends StatelessWidget {
   }
 }
 
+
+// Search BAR
+
 class SearchTextFormField extends StatelessWidget {
   const SearchTextFormField({
     Key? key,
