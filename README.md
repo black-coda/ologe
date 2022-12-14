@@ -1,4 +1,4 @@
-# damishop
+# Ologe 💃🕺
 
 An e-shop for selling Nigeria attires and clothing, ranging from men wares to women wrapper
 
