@@ -25,7 +25,7 @@ class _MenuBarState extends State<MenuBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 60.0,
+        elevation: 80.0,
         currentIndex: indexClicked,
         // unselectedItemColor: Defaults.secondaryColor,
         // selectedItemColor: Defaults.primaryColor,
