@@ -1,0 +1,5 @@
+{
+    "editor.fontFamily": "Fira code, 'Courier New', monospace",
+    "editor.cursorStyle": "line",
+    "files.autoSave": "afterDelay"
+}

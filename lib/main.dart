@@ -28,3 +28,5 @@ class AppWidget extends StatelessWidget {
     );
   }
 }
+
+// TODO: Continue from responsiveness
