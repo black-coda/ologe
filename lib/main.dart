@@ -23,7 +23,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // routes: ,
       home: const SafeArea(
-        child: MenuBar(),
+        child: MaterialApp(),
       ),
     );
   }
